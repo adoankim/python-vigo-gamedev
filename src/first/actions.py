@@ -19,6 +19,10 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+#
+# Assets used in this code aren't attached to the described copyright.
+# In order to use these resources for non free of charge purposes,
+# you must ask to their respective authors the usage permission.
 
 from cocos.actions import *
 import cocos
