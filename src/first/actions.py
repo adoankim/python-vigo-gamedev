@@ -20,7 +20,7 @@ class TextLayer(cocos.layer.Layer):
                                  anchor_x='center',
                                  anchor_y='center')
         label.position = window_width*0.5, window_height*0.2
-        label.do(Repeat(JumpTo(label.position, duration=2)))
+        label.do(Repeat(JumpTo(label.position, height=100, duration=2)))
         self.add(label, z=1)
 
         label2 = cocos.text.Label("Dat Scene",
