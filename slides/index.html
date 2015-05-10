@@ -415,6 +415,27 @@ if __name__ == '__main__':
                         </p>
 
                     </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Actions and transformations (V)
+                        </h2>
+                            <pre><code data-trim>
+#...
+label.do(Repeat(JumpTo(label.position, height=100, duration=2)))
+#...
+label2.do(Repeat(ScaleBy(1.1, 0.2) + Reverse(ScaleBy(1.1, 0.2))))
+#...
+label3.do(Repeat(FadeTo(0, 1) + FadeTo(255, 1)))
+#...
+sprite = cocos.sprite.Sprite('sunglasses.png')
+sprite.do(JumpTo((window_width*0.4, window_height*0.6), duration=1) +
+                  Repeat(RotateBy(10, 0.6) + Reverse(RotateBy(10, 0.6))))
+                            </code></pre>
+
+                    </section>
                 </section>
                 <section>
                     <section>
