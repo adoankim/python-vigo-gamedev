@@ -379,6 +379,68 @@
 
                     </section>
                 </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/> + <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                        </div>
+                        <h2>
+                            Event Handling
+                        </h2>
+                        <p>
+                            Pyglet events fallback on Cocos2D layer
+                            <pre><code data-trim>
+import cocos
+class MyLayer(cocos.layer.Layer):
+    is_event_handler = True
+    #...
+    def on_key_press(self, key, modifiers):
+        pass
+        
+    def on_key_release(self, key, modifiers):
+        pass
+        
+    def on_key_press(self, key, modifiers):
+        pass
+        
+    on_mouse_motion(self, x, y, dx, dy):
+        pass
+    #...
+					</code></pre>
+
+                        </p>
+                        <p class="footnote">
+                            <a href="https://bitbucket.org/pyglet/pyglet/src/6c297e5439865a786313ddee0d188d348480c263/pyglet/window/event.py?at=default">[Pyglet - more event methods..]</a>
+                        </p>
+
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/> + <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                        </div>
+                        <h2>
+                            Event Handling (II)
+                        </h2>
+                        <p>
+                            Pyglet key events fallback on Cocos2D's window handlers
+                            <pre><code data-trim>
+from pyglet.window import key
+from cocos import director
+
+keyboard_handler = key.KeyStateHandler()
+director.window.push_handlers(keyboard_handler)
+					       </code></pre>
+                        
+                        <p>
+                           
+                                <b>keyboard_handler</b> is an dictionary that saves keyboard keys states. 
+                        </p>
+                        <p class="footnote">
+                            <a href="https://bitbucket.org/pyglet/pyglet/src/6c297e5439865a786313ddee0d188d348480c263/pyglet/window/key.py?at=default">[Pyglet - more about key handling..]</a>
+                        </p>
+
+                    </section>
+                </section>
 			</div>
 
 		</div>
