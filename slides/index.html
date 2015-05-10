@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>#GameDev at Python Vigo: Game development basics (in Python)</title>
+
+		<meta name="description" content="Game development basics in Python">
+		<meta name="author" content="Adam Anh Doan Kim Caramés">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="custom">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>#GameDev at Python Vigo: </h1>
+                    <h3>Game development basics</br> <b>(in Python)</b></h3>
+					<p>
+						<small><a href="http://github.com/adoankim">Adam Anh Doan Kim Caramés</a> / <a href="http://twitter.com/adoankim">@adoankim</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Player 1:</h2>
+					<ul>
+						<li><b>Name</b>: Adam</li>
+						<li><b>Class</b>: Developer</li>
+						<li><b>Skills</b>: PHP, Java, Python and Javascript</li>
+					</ul>
+					
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Componentes </h2>
+						<p class="fragment grow">History + Graphics + Music/effects + Mechanics </p>
+						
+					</section>
+					<section>
+						<h3><u>History</u> + Graphics + Music/effects + Mechanics </h3>
+					</section>
+                    <section data-background="img/games/bs01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Bioshock © 2007 2K Boston and 2K Australia</h4>
+                    </section>
+                    <section data-background="img/games/bs02.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Bioshock Infinite © 2013 Irrational Games</h4>
+                    </section>
+                    
+                    <section data-background="img/games/lou01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">The Last of Us © 2013 Naughty Dog</h4>
+                    </section>
+                    <section data-background="img/games/mk01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Monkey Island © (1990/2009) Lucasfilm Games</h4>
+                    </section>
+					<section>
+						<h3>History + <u>Graphics</u> + Music/effects + Mechanics </h3>
+					</section>
+                    <section data-background="img/games/d01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Destiny © 2014 Bungie</h4>
+                    </section>
+                    <section data-background="img/games/c01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Crysis 3 © 2013 Crytek UK and Crytek Frankfurt</h4>
+                    </section>
+                    <section data-background="img/games/cod01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Call of Duty: Advanced Warfare © 2014 Sledgehammer Games</h4>
+                    </section>
+                    
+					<section>
+						<h3>History + Graphics + <u>Music/effects</u> + Mechanics </h3>
+					</section>
+                    <section data-background="img/games/gh01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Guitar Hero © 2007 Neversoft</h4>
+                    </section>
+					<section>
+						<h3>History + Graphics + Music/effects + <u>Mechanics</u> </h3>
+					</section>
+                    <section data-background="img/games/p01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Portal © 2007 Valve</h4>
+                    </section>
+				</section>
+				<section>
+    				<section>
+    					<h2>Isn't all about the money or team size</h2>
+    				</section>
+                    <section data-background="img/games/mc01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="https://minecraft.net/">Minecraft @ 2011 Mojang AB</a></p>
+                    </section>
+                    <section data-background="img/games/fez01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="http://fezgame.com/">Fez @ 2013 Polytron</a></p>
+                    </section>
+                    <section data-background="img/games/bas01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="https://www.supergiantgames.com/games/bastion/">Bastion @ 2011 Supergiant Games</a></p>
+                    </section>
+                    <section data-background="img/games/du01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="http://www.noogy.com/main.html">Dust: An Elysian Tail @ 2012 Humble Hearts</a> </p>
+    				</section>
+                    <section data-background="img/games/sp01.jpg" data-background-transition="zoom">
+                       	<p class="color-white top"><a href="http://www.spelunkyworld.com/info.html">Spelunky @ 2009 Derek Yu</a></p>
+                    </section>
+                </section>
+				<section>
+					
+					<section>
+						<h2>Motivation</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://ludumdare.com/compo/">LudumDare</a></li>
+                            <li><a href="https://pyweek.org/">PyWeek</a></li>
+                            <li><a href="http://compohub.net/">CompoHub: find game jams</a></li>
+                            <li><a href="http://www.onegameamonth.com/">OneGameAMonth</a></li>
+                            <li><a href="http://www.lessmilk.com/12games">LessMilk: 12 games in 12 weeks</a></li>
+                        </ul>
+					</section>
+                    
+					<section>
+						<h2>Communities</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.indiedb.com/">IndieDB</a></li>
+                            <li><a href="http://www.gamedev.net/">Gamedev.net</a></li>
+                            <li><a href="https://www.reddit.com/r/gamedev">Reddit/gamedev</a></li>
+                            <li><a href="http://gamedev.stackexchange.com/">StackExchange/gamedev</a></li>
+                            <li><a href="http://www.kongregate.com/forums/4-programming">Kongregate/4-programing</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Communities (II)</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.gamasutra.com/">Gamasutra</a></li>
+                            <li><a href="http://www.pixelprospector.com/">PixelProspector</a></li>
+                            <li><a href="http://freegamedev.net">FreeGameDev</a></li>
+                            <li><a href="http://www.html5gamedevs.com/">Html5GameDevs</a></li>
+                            <li><a href="tigsource.com/">TIGSource</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Resources</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://opengameart.org/">OpenGameArt</a></li>
+                            <li><a href="http://www.gameart2d.com/">GameArt2d</a></li>
+                            <li><a href="http://gameartpartners.com/">GameArtPartners</a></li>
+                            <li><a href="https://www.fiverr.com">Fiverr</a></li>
+                            <li><a href="http://freegamedev.net/wiki/Art_asset_resources">FreeGameDev: art asset resources</a></li>
+                            
+                        </ul>
+					</section>
+					<section>
+						<h2>Resources (II)</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.cartographersguild.com/">CartographersGuild</a></li>
+                            <li><a href="http://freefantasymaps.org/">FreeFantasyMaps</a></li>
+                            <li><a href="http://platformstarterkit.azurewebsites.net/">PlatformStarterKit</a></li>
+                            <li><a href="http://www.gutenberg.org/">Gutenberg: public domain ebooks</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Resources (III)</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.lessmilk.com/tutorials">LessMilk game tutorials</a></li>
+                            <li><a href="http://www.blender.org/manual/contents.html">Blender docs</a></li>
+                            <li><a href="https://www.makeschool.com/gamernews/277/20-best-free-art-resources-for-game-developers">MakeSchool: 20 best free art resources for game devs </a></li>
+                            <li><a href="http://letsmakegames.org/resources/art-assets-for-game-developers/">LetsMakeGames: art assets for game developers</a></li>
+                            <li><a href="http://darkgenesis.zenithmoon.com/monster-set-of-free-resources-for-game-design/">DarkGenesis: monster set of free resources for game design</a></li>
+                        </ul>
+					</section>
+                    
+					<section>
+						<h2>Tools</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.drpetter.se/project_sfxr.html">SFXR</a></li>
+                            <li><a href="http://www.mapeditor.org/">Tiled Map Editor</a></li>
+                            <li><a href="https://www.codeandweb.com/texturepacker">Texture Packer</a></li>
+                            <li><a href="http://www.aseprite.org/">Aseprite</a></li>
+                            <li><a href="http://www.piskelapp.com/">Piskel</a></li>
+                            <li><a href="http://www.humanbalance.net/gale/us/">GraphicsGale</a></li>
+                            <li><a href="http://orteil.dashnet.org/gamegen">Orteil's game theme generator</a></li>
+                        </ul>
+					</section>
+				</section>
+                <section>
+                    <section><h2>So what we can do/use in Python?</h2></section>
+                
+                    <section class="clean-images">
+                        <a href="http://www.pygame.org/">
+                            <img src="img/pygame.png" width="50%"   alt="Pygame" title="Pygame"/>
+                        </a>
+                        <p>Release: 2000-10 / Stable: 1.9.1 (2009-08)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://pyglet.org/">
+                            <img src="img/pyglet.png"   width="25%" alt="Pyglet" title="Pyglet"/></br>
+
+                        </a>   
+                        <h3>Pyglet</h3>
+                        <p>Alpha Release: 2007-06 / Stable: 1.1.4 (2010-01), 1.2.2 (2015-03)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://python.cocos2d.org/">
+                            <img src="img/cocos2d.png"  width="50%" alt="Cocos2d" title="Cocos2d"/>
+                        </a>
+                        <p>Release: 2008-02 / Stable: 0.6.3 (2015-04)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://kivy.org/">
+                            <img src="img/kivy.png"   width="30%"  alt="Kivy" title="Kivy"/>
+                        </a>
+                        <h3>Kivy</h3>
+                        <p>Release: 2012-09 / Stable: 1.9.0 (2015-04)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://www.blender.org/features/">
+                            <img src="img/blender.png"   width="50%"  alt="Blender" title="Blender"/>
+                        </a>
+                        <h3>Game Engine</h3>
+                        <p>Release: 2000 / Stable: 2.74 (2015-03)</p>
+                    </section>
+
+                </section>
+                <section>
+                    <h1 class="clean-images">
+                        <img src="img/cocos2d.png"  width="40%" alt="Cocos2d" title="Cocos2d"/>
+                    </h1>
+                    <p class="fragment">Python 3</p>
+                    <p class="fragment">Low learning curve</p>
+                    <p class="fragment">Pyglet API access</p>
+                    <p class="fragment">Development based on Nodes, Scenes and Layers</p>
+                    <p class="fragment">Actions and transformations effects</p>
+                    <p class="fragment">Basic Collision engine </p>
+                    <p class="fragment">...</p>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Cocos2d Basics
+                        </h2>
+                        <p>Node: Base class that exposes Cocos2d core characteristics and functionalites:</p>
+                        <ul class="medium">
+                            <li>Parent-child</li>
+                            <li>Spatial placement</li>
+                            <li>Events</li>
+                            <li>Rendering</li>
+                            <li>Time and actions management</li>
+                        </ul>
+                        <p class="footnote">
+                            <a href="http://python.cocos2d.org/doc/programming_guide/cocosnodes.html">[Cocos2d - More about Nodes]</a>
+                        </p>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Cocos2d Basics (II)
+                        </h2>
+                        <h3>Scenes</h3>
+                        <div class="clean-images">
+                            <img src="img/cocos2d/scenes.png" alt="Scenes" title="Scenes"/>
+                            <p class="footnote">
+                                <a href="http://python.cocos2d.org/doc/programming_guide/basic_concepts.html#scenes">[Cocos2d - Scenes workflow]</a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <p><b>Director</b>: Singleton object that manages the main window and scenes workflow</p>
+                            <p class="footnote"><a href="http://python.cocos2d.org/doc/api/cocos.director.html#module-cocos.director">[Cocos2d - Director]</a></p>
+                        <div>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Cocos2d Basics (II)
+                        </h2>
+                        <h3>Layers</h3>
+                        <div class="clean-images">
+                            <img src="img/cocos2d/layers.png" alt="Layers" title="Layers"/>
+                            <p class="footnote">
+                                <a href="http://python.cocos2d.org/doc/programming_guide/basic_concepts.html#layers">[Cocos2d - Layered scene setup]</a>
+                            </p>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Actions and transformations
+                        </h2>
+                        <p>
+                            <b>Actions</b> are grouped orders received by a node 
+                            resulting in a specific attribute <b>transformation</b>
+                            (positional, rotational, scale, visibility). 
+                        </p>
+                    </section>
+                    <section>
+
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Actions and transformations (II)
+                        </h2>
+
+                        <ul>
+                            <li>MoveBy((x, y))</li>
+                            <li>Jump(y, x, jumps, duration)</li>
+                            <li>Beizer(bezier, duration, forward)</li>
+                            <li>RotateTo(angle , duration)</li>
+                            <li>FadeOut(duration)</li>
+                            <li>....</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Actions and transformations (III)
+                        </h2>
+                        <p>
+                            One action can be composed within an other action:
+                            <ul>Chained actions: "action1 + action2" </ul>
+                            <ul>parallel actions: "action1 | action2" </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Actions and transformations (IV)
+                        </h2>
+                        <p>
+                            We can apply modifiers to the actions:
+                            <ul>
+                                <li>Looping actions: "action * 10" </li>
+                                <li>Infinite looping actions: "Repeat(action)" </li>
+                                <li>Accelerate actions: "Accelerate(action)" </li>
+                                <li>...</li>
+                            </ul>
+                        </p>
+                        <p class="footnote">
+                            <a href="http://python.cocos2d.org/doc/programming_guide/actions.html">[Cocos2d - more about actions..]</a>
+                        </p>
+
+                    </section>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

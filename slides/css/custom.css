@@ -1,0 +1,47 @@
+.reveal section .clean-list{
+    list-style:none;
+}
+
+.reveal section .clean-images img{
+    border:0;
+    box-shadow: 0 0 ;
+    margin:0;
+}
+
+.reveal section .padded-items li{
+    padding: 0.25em;
+}
+
+.reveal section .center{
+    text-align:center
+}
+
+.reveal section .left{
+    text-align:left
+}
+
+.reveal section .color-white,
+.reveal section .color-white a{
+    color:white;
+}
+
+.reveal section .color-white a{
+    text-decoration:underline;
+}
+
+.reveal section .bottom{
+    margin-top:65%;
+}
+.reveal section .top{
+    float:left;
+    margin-top:-30%;
+}
+
+.reveal section .footnote{
+    font-size: 0.6em;
+    margin:0.5em;
+}
+
+.reveal section .medium{
+    font-size: 0.8em;
+}
