@@ -301,7 +301,7 @@
                             <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
                         </div>
                         <h2>
-                            Cocos2d Basics (II)
+                            Cocos2d Basics (III)
                         </h2>
                         <h3>Layers</h3>
                         <div class="clean-images">
@@ -310,6 +310,43 @@
                                 <a href="http://python.cocos2d.org/doc/programming_guide/basic_concepts.html#layers">[Cocos2d - Layered scene setup]</a>
                             </p>
                         </div>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                        </div>
+                        <h2>
+                            Cocos2d Basics (IV)
+                        </h2>
+                        <pre><code data-trim>
+import cocos
+
+# structured style
+def create_layer():
+    a_layer = cocos.layer.Layer()
+    a_label = cocos.text.Label('structured')
+    a_label.position = 320, 240 # x, y
+    a_layer.add(a_label)
+    return a_layer
+    
+    
+# object oriented style
+class MyLayer(cocos.layer.Layer):
+    def __init__(self):
+        super(MyLayer, self).__init__()        
+        a_label = cocos.text.Label('Object oriented')
+        a_label.position = 320, 100 # x, y
+        self.add(a_label)
+    
+    
+if __name__ == '__main__': 
+    cocos.director.director.init(width=640, height=480)
+    a_scene = cocos.scene.Scene()
+    a_scene.add(create_layer(), z = 1) 
+    a_scene.add(myLayer(), z = 0)
+    cocos.director.director.run(a_scene)
+
+                        </code></pre>
                     </section>
                 </section>
                 <section>
