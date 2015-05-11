@@ -481,22 +481,53 @@ class MyLayer(cocos.layer.Layer):
                         </h2>
                         <p>
                             Pyglet key events fallback on Cocos2D's window handlers
+                        </p>
                             <pre><code data-trim>
 from pyglet.window import key
 from cocos import director
 
-keyboard_handler = key.KeyStateHandler()
-director.window.push_handlers(keyboard_handler)
+kb = key.KeyStateHandler()
+director.window.push_handlers(kb)
 					       </code></pre>
-                        
+                        <p class="footnote">
+                            <a href="http://jpwright.net/writing/python-cocos2d-game-1/">[Snipped based on a JPWright blog's entry]</a>
+                        </p>
                         <p>
                            
-                                <b>keyboard_handler</b> is an dictionary that saves keyboard keys states. 
+                                <b>kb</b> is an dictionary that saves keyboard keys states. 
                         </p>
                         <p class="footnote">
                             <a href="https://bitbucket.org/pyglet/pyglet/src/6c297e5439865a786313ddee0d188d348480c263/pyglet/window/key.py?at=default">[Pyglet - more about key handling..]</a>
                         </p>
 
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/> + <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                        </div>
+                        <h2>
+                            Event Handling (III)
+                        </h2>
+                        <pre><code data-trim>
+# scheduled update handler for sprite position management
+self.schedule(self.__update__)
+# ...
+def __update__(self, dt):
+    turbo = (4 * kb[key.LSHIFT]) | 1
+    
+    new_x = self.sprite.position[0] + 
+            (dt * 200 * turbo * kb[key.RIGHT] - kb[key.LEFT])
+            
+    new_y = self.sprite.position[1] + 
+            (dt * 200 * turbo * kb[key.UP] - kb[key.DOWN])
+
+    self.sprite.position = new_x, new_y
+					       </code></pre>
+                        
+                        <p class="footnote">
+                            <a href="http://jpwright.net/writing/python-cocos2d-game-1/">[Delta time  on gamedev explained]</a>
+                        </p>
+                        
                     </section>
                 </section>
 			</div>
