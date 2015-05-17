@@ -20,6 +20,10 @@
     text-align:left
 }
 
+.reveal section .right{
+    text-align:right
+}
+
 .reveal section .color-white,
 .reveal section .color-white a{
     color:white;
@@ -40,6 +44,11 @@
 .reveal section .footnote{
     font-size: 0.6em;
     margin:0.5em;
+}
+
+.reveal section .footnote-xs{
+    font-size: 0.4em;
+    margin:0.4em;
 }
 
 .reveal section .medium{
