@@ -22,6 +22,9 @@
 
 # Animation snippet based on https://groups.google.com/d/msg/cocos-discuss/9UTExyiwIDE/HoCm-ZihXoYJ post
 
+# Doge animation based on ZawiasJR's doge spritesheet
+# http://www.reddit.com/r/spelunky/comments/1w9yls/i_made_my_first_damsel_mod_doge_sprite_sheet_in/
+
 import cocos
 import pyglet
 from pyglet.window import key
@@ -33,7 +36,7 @@ class CharacterLayer(cocos.layer.Layer):
         Layer that represents a character and some of its states: Standing, Walking and Running.
     """
     is_event_handler = True
-    DOGE_SPRITESHEET_PATH = 'doge_spritesheet.png'
+    DOGE_SPRITESHEET_PATH = 'images/doge_spritesheet.png'
 
     def __init__(self):
         super(CharacterLayer, self).__init__()
