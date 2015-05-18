@@ -54,3 +54,9 @@
 .reveal section .medium{
     font-size: 0.8em;
 }
+
+.reveal section .float-bottom-right{
+    position:absolute;
+    bottom: -25%;
+    right: 0;
+}
