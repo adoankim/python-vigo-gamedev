@@ -60,7 +60,7 @@ class CharacterLayer(cocos.layer.Layer):
         self.get("walking").do(cocos.actions.Hide())
 
         self.scale_x = 1
-
+        self.is_moving = False
         self.keyboard = key.KeyStateHandler()
         cocos.director.director.window.push_handlers(self.keyboard)
 
@@ -87,24 +87,25 @@ class CharacterLayer(cocos.layer.Layer):
         is_looking_left = (self.scale_x == -1) | -1
         left_trigger = self.keyboard[key.LEFT] | (_key == key.LEFT)
         right_trigger = self.keyboard[key.RIGHT] | (_key == key.RIGHT)
+        self.is_moving = right_trigger | right_trigger
         running_trigger = self.keyboard[key.LSHIFT] | (_key == key.LSHIFT)
-        self.scale_x = is_looking_left*left_trigger | -1*is_looking_left*right_trigger
 
         if left_trigger | right_trigger:
+            self.scale_x = is_looking_left*left_trigger | -1*is_looking_left*right_trigger
             self.get("standing").do(cocos.actions.Hide())
             self.get("running"*(not running_trigger) + "walking"*running_trigger).do(cocos.actions.Hide())
             self.get("running"*running_trigger + "walking"*(not running_trigger)).do(cocos.actions.Show())
 
     def on_key_release(self, _key, _):
-        if _key == key.LSHIFT:
+        if _key == key.LSHIFT and self.is_moving:
             self.get("running").do(cocos.actions.Hide())
             self.get("walking").do(cocos.actions.Show())
 
         if (_key == key.RIGHT) | (_key == key.LEFT):
+            self.is_moving = False
             self.get("standing").do(cocos.actions.Show())
             self.get("running").do(cocos.actions.Hide())
             self.get("walking").do(cocos.actions.Hide())
-
 
 class AnimLayer(cocos.layer.Layer):
     def __init__(self):
