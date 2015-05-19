@@ -107,6 +107,7 @@ class CharacterLayer(cocos.layer.Layer):
             self.get("running").do(cocos.actions.Hide())
             self.get("walking").do(cocos.actions.Hide())
 
+
 class AnimLayer(cocos.layer.Layer):
     def __init__(self):
         super(AnimLayer, self).__init__()
