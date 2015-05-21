@@ -1,6 +1,6 @@
 # Python Vigo Game Dev
 
-Slides and examples about basics of game development for (Python Vigo Dev Group)[https://www.python-vigo.es] presentation.
+Slides and examples about basics of game development for [Python Vigo Dev Group](https://www.python-vigo.es) presentation.
 
 ## Examples structure
 
@@ -16,7 +16,7 @@ src/goodies                      | These ones show how to the handle music&sound
 ### Examples execution
 First of all you must satisfy the dependencies required for the demos, they are listed in *requirements.txt* file.
 
-In order to install these dependencies you can just type: ```pip install -r requirements.txt```. I suggest you to build a (virtualenv)[https://virtualenv.pypa.io/en/latest/] environment to maintain clean your Python installation.
+In order to install these dependencies you can just type: ```pip install -r requirements.txt```. I suggest you to build a [virtualenv](https://virtualenv.pypa.io/en/latest/) environment to maintain clean your Python installation.
 
 In order to execute them just type: ``` python src/demo_folder/demo_file.py```
 
