@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>#GameDev at Python Vigo: Game development basics (in Python)</title>
+
+		<meta name="description" content="Game development basics in Python">
+		<meta name="author" content="Adam Anh Doan Kim Caramés">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="custom">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>#GameDev at Python Vigo: </h1>
+                    <h3>Game development basics</br> <b>(in Python)</b></h3>
+                <p class="footnote">
+                    2015/05/21
+                </p>
+                <p class="footnote float-bottom-right">
+                    Slides powered by <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a>
+                </p>
+				</section>
+
+				<section>
+					<h2>Player 1:</h2>
+					<ul>
+                        <li><b>Name</b>: Adam</li>
+						<li><b>Class</b>: Developer</li>
+						<li><b>Skills</b>: PHP, Java, Python and Javascript</li>
+					</ul>
+					
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Components </h2>
+						<p class="fragment grow">Story + Graphics + Music/effects + Mechanics </p>
+						
+					</section>
+					<section>
+						<h3><u>Story</u> + Graphics + Music/effects + Mechanics </h3>
+					</section>
+                    <section data-background="img/games/bs01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Bioshock © 2007 2K Boston and 2K Australia</h4>
+                    </section>
+                    <section data-background="img/games/bs02.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Bioshock Infinite © 2013 Irrational Games</h4>
+                    </section>
+                    
+                    <section data-background="img/games/lou01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">The Last of Us © 2013 Naughty Dog</h4>
+                    </section>
+                    <section data-background="img/games/mk01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Monkey Island © (1990/2009) Lucasfilm Games</h4>
+                    </section>
+					<section>
+						<h3>Story + <u>Graphics</u> + Music/effects + Mechanics </h3>
+					</section>
+                    <section data-background="img/games/d01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Destiny © 2014 Bungie</h4>
+                    </section>
+                    <section data-background="img/games/c01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Crysis 3 © 2013 Crytek UK and Crytek Frankfurt</h4>
+                    </section>
+                    <section data-background="img/games/cod01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Call of Duty: Advanced Warfare © 2014 Sledgehammer Games</h4>
+                    </section>
+                    
+					<section>
+						<h3>Story + Graphics + <u>Music/effects</u> + Mechanics </h3>
+					</section>
+                    <section data-background="img/games/gh01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Guitar Hero © 2007 Neversoft</h4>
+                    </section>
+					<section>
+						<h3>Story + Graphics + Music/effects + <u>Mechanics</u> </h3>
+					</section>
+                    <section data-background="img/games/p01.jpg" data-background-transition="zoom">
+                        <h4 class="color-white bottom">Portal © 2007 Valve</h4>
+                    </section>
+				</section>
+				<section>
+    				<section>
+    					<h2>Isn't all about the money or team size</h2>
+    				</section>
+                    <section data-background="img/games/mc01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="https://minecraft.net/">Minecraft @ 2011 Mojang AB</a></p>
+                    </section>
+                    <section data-background="img/games/fez01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="http://fezgame.com/">Fez @ 2013 Polytron</a></p>
+                    </section>
+                    <section data-background="img/games/bas01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="https://www.supergiantgames.com/games/bastion/">Bastion @ 2011 Supergiant Games</a></p>
+                    </section>
+                    <section data-background="img/games/du01.jpg" data-background-transition="zoom">
+                        <p class="color-white top"><a href="http://www.noogy.com/main.html">Dust: An Elysian Tail @ 2012 Humble Hearts</a> </p>
+    				</section>
+                    <section data-background="img/games/sp01.jpg" data-background-transition="zoom">
+                       	<p class="color-white top"><a href="http://www.spelunkyworld.com/info.html">Spelunky @ 2009 Derek Yu</a></p>
+                    </section>
+                </section>
+				<section>
+					
+					<section>
+						<h2>Motivation</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://ludumdare.com/compo/">LudumDare</a></li>
+                            <li><a href="https://pyweek.org/">PyWeek</a></li>
+                            <li><a href="http://compohub.net/">CompoHub: find game jams</a></li>
+                            <li><a href="http://www.onegameamonth.com/">OneGameAMonth</a></li>
+                            <li><a href="http://www.lessmilk.com/12games">LessMilk: 12 games in 12 weeks</a></li>
+                        </ul>
+					</section>
+                    
+					<section>
+						<h2>Communities</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.indiedb.com/">IndieDB</a></li>
+                            <li><a href="http://www.gamedev.net/">Gamedev.net</a></li>
+                            <li><a href="https://www.reddit.com/r/gamedev">Reddit/gamedev</a></li>
+                            <li><a href="http://gamedev.stackexchange.com/">StackExchange/gamedev</a></li>
+                            <li><a href="http://www.kongregate.com/forums/4-programming">Kongregate/4-programing</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Communities (II)</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.gamasutra.com/">Gamasutra</a></li>
+                            <li><a href="http://www.pixelprospector.com/">PixelProspector</a></li>
+                            <li><a href="http://freegamedev.net">FreeGameDev</a></li>
+                            <li><a href="http://www.html5gamedevs.com/">Html5GameDevs</a></li>
+                            <li><a href="tigsource.com/">TIGSource</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Resources</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://opengameart.org/">OpenGameArt</a></li>
+                            <li><a href="http://www.gameart2d.com/">GameArt2d</a></li>
+                            <li><a href="http://gameartpartners.com/">GameArtPartners</a></li>
+                            <li><a href="https://www.fiverr.com">Fiverr</a></li>
+                            <li><a href="http://incompetech.com/">IncompeTech: Music licensed under creative commons</a></li>
+                            <li><a href="http://freegamedev.net/wiki/Art_asset_resources">FreeGameDev: art asset resources</a></li>
+                            
+                        </ul>
+					</section>
+					<section>
+						<h2>Resources (II)</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.cartographersguild.com/">CartographersGuild</a></li>
+                            <li><a href="http://freefantasymaps.org/">FreeFantasyMaps</a></li>
+                            <li><a href="http://platformstarterkit.azurewebsites.net/">PlatformStarterKit</a></li>
+                            <li><a href="http://www.gutenberg.org/">Gutenberg: public domain ebooks</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Resources (III)</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.lessmilk.com/tutorials">LessMilk game tutorials</a></li>
+                            <li><a href="http://www.blender.org/manual/contents.html">Blender docs</a></li>
+                            <li><a href="https://www.makeschool.com/gamernews/277/20-best-free-art-resources-for-game-developers">MakeSchool: 20 best free art resources for game devs </a></li>
+                            <li><a href="http://letsmakegames.org/resources/art-assets-for-game-developers/">LetsMakeGames: art assets for game developers</a></li>
+                            <li><a href="http://darkgenesis.zenithmoon.com/monster-set-of-free-resources-for-game-design/">DarkGenesis: monster set of free resources for game design</a></li>
+                        </ul>
+					</section>
+                    
+					<section>
+						<h2>Tools</h2>
+                        <ul class="clean-list padded-items">
+                            <li><a href="http://www.drpetter.se/project_sfxr.html">SFXR</a></li>
+                            <li><a href="http://www.mapeditor.org/">Tiled Map Editor</a></li>
+                            <li><a href="https://www.codeandweb.com/texturepacker">Texture Packer</a></li>
+                            <li><a href="http://www.aseprite.org/">Aseprite</a></li>
+                            <li><a href="http://www.piskelapp.com/">Piskel</a></li>
+                            <li><a href="http://www.humanbalance.net/gale/us/">GraphicsGale</a></li>
+                            <li><a href="http://orteil.dashnet.org/gamegen">Orteil's game theme generator</a></li>
+                        </ul>
+					</section>
+				</section>
+                <section>
+                    <section><h2>So what we can do/use in Python?</h2></section>
+                
+                    <section class="clean-images">
+                        <a href="http://www.pygame.org/">
+                            <img src="img/pygame.png" width="50%"   alt="Pygame" title="Pygame"/>
+                        </a>
+                        <p>Release: 2000-10 / Stable: 1.9.1 (2009-08)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://pyglet.org/">
+                            <img src="img/pyglet.png"   width="25%" alt="Pyglet" title="Pyglet"/></br>
+
+                        </a>   
+                        <h3>Pyglet</h3>
+                        <p>Alpha Release: 2007-06 / Stable: 1.1.4 (2010-01), 1.2.2 (2015-03)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://python.cocos2d.org/">
+                            <img src="img/cocos2d.png"  width="50%" alt="Cocos2d" title="Cocos2d"/>
+                        </a>
+                        <p>Release: 2008-02 / Stable: 0.6.3 (2015-04)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://kivy.org/">
+                            <img src="img/kivy.png"   width="30%"  alt="Kivy" title="Kivy"/>
+                        </a>
+                        <h3>Kivy</h3>
+                        <p>Release: 2012-09 / Stable: 1.9.0 (2015-04)</p>
+                    </section>
+                    <section class="clean-images">
+                        <a href="http://www.blender.org/features/">
+                            <img src="img/blender.png"   width="50%"  alt="Blender" title="Blender"/>
+                        </a>
+                        <h3>Game Engine</h3>
+                        <p>Release: 2000 / Stable: 2.74 (2015-03)</p>
+                    </section>
+
+                </section>
+                <section>
+                    <h1 class="clean-images">
+                        <img src="img/cocos2d.png"  width="40%" alt="Cocos2d" title="Cocos2d"/>
+                    </h1>
+                    <p class="fragment">Python 3</p>
+                    <p class="fragment">Low learning curve</p>
+                    <p class="fragment">Pyglet API access</p>
+                    <p class="fragment">Development based on Nodes, Scenes and Layers</p>
+                    <p class="fragment">Actions and transformations effects</p>
+                    <p class="fragment">Basic Collision engine </p>
+                    <p class="fragment">...</p>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Cocos2d Basics
+                        </h2>
+                        <p>Node: Base class that exposes Cocos2d core characteristics and functionalites:</p>
+                        <ul class="medium">
+                            <li>Parent-child</li>
+                            <li>Spatial placement</li>
+                            <li>Events</li>
+                            <li>Rendering</li>
+                            <li>Time and actions management</li>
+                        </ul>
+                        <p class="footnote">
+                            <a href="http://python.cocos2d.org/doc/programming_guide/cocosnodes.html">[Cocos2d - More about Nodes]</a>
+                        </p>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Cocos2d Basics (II)
+                        </h2>
+                        <h3>Scenes</h3>
+                        <div class="clean-images">
+                            <img src="img/cocos2d/scenes.png" alt="Scenes" title="Scenes"/>
+                            <p class="footnote">
+                                <a href="http://python.cocos2d.org/doc/programming_guide/basic_concepts.html#scenes">[Cocos2d - Scenes workflow]</a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <p><b>Director</b>: Singleton object that manages the main window and scenes workflow</p>
+                            <p class="footnote"><a href="http://python.cocos2d.org/doc/api/cocos.director.html#module-cocos.director">[Cocos2d - Director]</a></p>
+                        <div>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Cocos2d Basics (III)
+                        </h2>
+                        <h3>Layers</h3>
+                        <div class="clean-images">
+                            <img src="img/cocos2d/layers.png" alt="Layers" title="Layers"/>
+                            <p class="footnote">
+                                <a href="http://python.cocos2d.org/doc/programming_guide/basic_concepts.html#layers">[Cocos2d - Layered scene setup]</a>
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Cocos2d Basics (IV)
+                        </h2>
+                        <pre><code data-trim>
+import cocos
+
+# structured style
+def create_layer():
+    a_layer = cocos.layer.Layer()
+    a_label = cocos.text.Label('structured')
+    a_label.position = 320, 240 # x, y
+    a_layer.add(a_label)
+    return a_layer
+    
+    
+# object oriented style
+class MyLayer(cocos.layer.Layer):
+    def __init__(self):
+        super(MyLayer, self).__init__()        
+        a_label = cocos.text.Label('Object oriented')
+        a_label.position = 320, 100 # x, y
+        self.add(a_label)
+    
+    
+if __name__ == '__main__': 
+    cocos.director.director.init(width=640, height=480)
+    a_scene = cocos.scene.Scene()
+    a_scene.add(create_layer(), z = 1) 
+    a_scene.add(myLayer(), z = 0)
+    cocos.director.director.run(a_scene)
+
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Actions and transformations
+                        </h2>
+                        <p>
+                            <b>Actions</b> are grouped orders received by a node 
+                            resulting in a specific attribute <b>transformation</b>
+                            (positional, rotational, scale, visibility). 
+                        </p>
+                    </section>
+                    <section>
+
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Actions and transformations (II)
+                        </h2>
+
+                        <ul>
+                            <li>MoveBy((x, y))</li>
+                            <li>Jump(y, x, jumps, duration)</li>
+                            <li>Beizer(bezier, duration, forward)</li>
+                            <li>RotateTo(angle , duration)</li>
+                            <li>FadeOut(duration)</li>
+                            <li>....</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Actions and transformations (III)
+                        </h2>
+                        <p>
+                            One action can be composed within an other action:
+                            <ul>Chained actions: "action1 + action2" </ul>
+                            <ul>parallel actions: "action1 | action2" </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Actions and transformations (IV)
+                        </h2>
+                        <p>
+                            We can apply modifiers to the actions:
+                            <ul>
+                                <li>Looping actions: "action * 10" </li>
+                                <li>Infinite looping actions: "Repeat(action)" </li>
+                                <li>Accelerate actions: "Accelerate(action)" </li>
+                                <li>...</li>
+                            </ul>
+                        </p>
+                        <p class="footnote">
+                            <a href="http://python.cocos2d.org/doc/programming_guide/actions.html">[Cocos2d - more about actions..]</a>
+                        </p>
+
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Actions and transformations (V)
+                        </h2>
+                            <pre><code data-trim>
+#...
+label.do(Repeat(JumpTo(label.position, height=100, duration=2)))
+#...
+label2.do(Repeat(ScaleBy(1.1, 0.2) + Reverse(ScaleBy(1.1, 0.2))))
+#...
+label3.do(Repeat(FadeTo(0, 1) + FadeTo(255, 1)))
+#...
+sprite = cocos.sprite.Sprite('sunglasses.png')
+sprite.do(JumpTo((window_width*0.4, window_height*0.6), duration=1) +
+                  Repeat(RotateBy(10, 0.6) + Reverse(RotateBy(10, 0.6))))
+                            </code></pre>
+
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Event Handling
+                        </h2>
+                        <p>
+                            Pyglet events fallback on Cocos2D layer
+                            <pre><code data-trim>
+import cocos
+class MyLayer(cocos.layer.Layer):
+    is_event_handler = True
+    #...
+    def on_key_press(self, key, modifiers):
+        pass
+        
+    def on_key_release(self, key, modifiers):
+        pass
+        
+    def on_key_press(self, key, modifiers):
+        pass
+        
+    def on_mouse_motion(self, x, y, dx, dy):
+        pass
+    #...
+					</code></pre>
+
+                        </p>
+                        <p class="footnote">
+                            <a href="https://bitbucket.org/pyglet/pyglet/src/6c297e5439865a786313ddee0d188d348480c263/pyglet/window/event.py?at=default">[Pyglet - more event methods..]</a>
+                        </p>
+
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Event Handling (II)
+                        </h2>
+                        <p>
+                            Pyglet key events fallback on Cocos2D's window handlers
+                        </p>
+                            <pre><code data-trim>
+from pyglet.window import key
+from cocos import director
+
+kb = key.KeyStateHandler()
+director.window.push_handlers(kb)
+					       </code></pre>
+                        <p class="footnote">
+                            <a href="http://jpwright.net/writing/python-cocos2d-game-1/">[Snipped based on a JPWright blog's entry]</a>
+                        </p>
+                        <p>
+                           
+                                <b>kb</b> is an dictionary that saves keyboard keys states. 
+                        </p>
+                        <p class="footnote">
+                            <a href="https://bitbucket.org/pyglet/pyglet/src/6c297e5439865a786313ddee0d188d348480c263/pyglet/window/key.py?at=default">[Pyglet - more about key handling..]</a>
+                        </p>
+
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Event Handling (III)
+                        </h2>
+                        <pre><code data-trim>
+# scheduled update handler for sprite position management
+self.schedule(self.__update__)
+# ...
+def __update__(self, dt):
+    turbo = (4 * kb[key.LSHIFT]) | 1
+    
+    new_x = self.sprite.position[0] + 
+            (dt * 200 * turbo * kb[key.RIGHT] - kb[key.LEFT])
+            
+    new_y = self.sprite.position[1] + 
+            (dt * 200 * turbo * kb[key.UP] - kb[key.DOWN])
+
+    self.sprite.position = new_x, new_y
+					       </code></pre>
+                        
+                        <p class="footnote">
+                            <a href="http://www.informit.com/articles/article.aspx?p=2167437&seqNum=3">[Delta time  on gamedev explained]</a>
+                        </p>
+                        
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Animations
+                        </h2>
+                        <p>
+                        Based on spritesheet images (row x columns)
+                        <div class="clean-images">
+                                 <img src="img/cocos2d/run.png" width="100%"  alt="Running sprite sheet" title="Running sprite sheet"/>
+                        </div>
+                        </p>
+                        <p class="footnote">
+                            <a href="http://opengameart.org/content/side-scroller-sprite-base-animation">[Side Scroller Sprite Base Animation by Wind astella | CC-By 3.0 License]</a>
+                        </p>
+
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Animations (II)
+                        </h2>
+                        <pre><code data-trim>
+from pyglet import image
+
+img = image.load('/path/to/the/image') # Image load
+                        
+# We build a matrix were each element is a sprite sheet partition 
+img_grid = image.ImageGrid(img, rows, columns, 
+                           item_height, item_width, 
+                           column_padding, row_padding)
+
+# We make a texture grid from the image grid for memory optimization
+texture_grid = image.TextureGrid(img_grid)
+
+# Animation building from a set of elements of the grid
+animation_01 = image.Animation.
+               from_image_sequence(sequence=texture_grid[begin:end]
+                                   period=animation_rate,
+                                   Loop=True|False)
+
+                        </code></pre>
+                        <p class="footnote">
+                        <a href="https://groups.google.com/d/msg/cocos-discuss/9UTExyiwIDE/HoCm-ZihXoYJ">[Animaton snippet based on cocos-discuss forum post]</a>
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Music & Sounds
+                        </h2>
+                        <p>
+                            By default we can play uncompressed "RIFF/WAV" files without any extra dependencies.
+                        </p>
+                        <p>
+                            To play MP3/AU/OGG files, we must install <a href="http://avbin.github.io/">AVBin</a>.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a> + 
+                            <a href="http://www.pyglet.org/">
+                                <img src="img/pyglet.png"  width="5%" alt="Pyglet" title="Pyglet"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Music & Sounds (II)
+                        </h2>
+                        <pre><code data-trim>
+
+music = pyglet.resource.media('/path/to/the/file')
+# Using Player wrapper
+player = pyglet.media.Player()
+player.queue(music)
+player.volume = 0.2
+player.play()
+
+# playing directly from source
+sound_media_src = pyglet.media.load('/path/to/the/file')
+sound_media_src = pyglet.media.StaticSource(sound_media)
+sound_media_src.play().volume = 0.5
+                            </code></pre>
+                        <p class="footnote">
+                            <a href="http://www.pyglet.org/doc-current/programming_guide/media.html">[ More about Pyglet media management ]</a>
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Collisions
+                        </h2>
+                        <p>
+                            Cocos2d have a module for simple collision and proximity checking, based on geometrical distance and overlapping calculations. 
+                        </p>
+                        
+                    </section>
+<p class="footnote">
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Collisions (II)
+                        </h2>
+                        <div class="clean-images">
+                            <img src="img/cocos2d/col.png" title="Collision shapes" alt="Collision shapes"/> 
+                        </div>
+                        <p class="footnote">
+            
+                            A collidable object must have a "cshape" property (<a href="http://python.cocos2d.org/doc/api/cocos.collision_model.html#cocos.collision_model.CircleShape">CircleShape</a> or <a href="http://python.cocos2d.org/doc/api/cocos.collision_model.html#cocos.collision_model.AARectShape">AARectShape</a>).
+                        </p>
+                        <p class="footnote"> Collisions and distance checking are handled by the <a href="http://python.cocos2d.org/doc/api/cocos.collision_model.html#cocos.collision_model.CollisionManager">collision manager</a>.</p>
+                        
+                    </section>
+
+
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Collisions (III)
+                        </h2>
+                        <p>
+                           <pre><code data-trim>
+import cocos.collision_model as cm
+
+# ...
+collision_mgr = cm.CollisionManagerGrid(xmin, xmax, 
+                                        ymin, ymax, 
+                                        cell_width, 
+                                        cell_height)
+# ...                                            
+for item in collision_mgr.iter_colliding(target):
+    # react to the collision 
+# ...
+near_list = collision_mgr.objs_near(obj, near_distance)
+# ...
+check_a_b_collision = collision_mgr.they_collide(a, b)
+# ...
+items_in_zone = collision_mgr.objs_into_box(minx, maxx, miny, maxy)
+
+                           </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Collisions (IV)
+                        </h2>
+                        <p>
+                           <pre><code data-trim>
+import cocos.collision_model as cm
+import cocos.euclid as eu
+
+#...
+obj_center = eu.Vector2(cx, cy)
+obj.cshape = cm.AARectShape(center=obj_center, half_width, half_height)
+                            
+collision_mgr.add(obj, name)
+                           </code></pre>
+                        </p>
+                        <p class="footnote">
+                            <a href="http://python.cocos2d.org/doc/programming_guide/collision.html"> [ More about collision module ] </a>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                        <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                           Extra: spawning objects
+                        </h2>
+                        <p>
+                           <pre><code data-trim>
+    class Entity(cocos.sprite.Sprite):
+        def __init__(self, image, x=0.0, y=0.0):
+        # ...
+
+        def draw(self):
+            if self.x + self.center[0] < self.boundaries[0] or \ 
+               self.x - self.center[0] > self.boundaries[2]:
+                self.parent.remove(self)
+                return
+
+            if self.y + self.center[1] < self.boundaries[1] or \ 
+               self.y - self.center[1] > self.boundaries[3]:
+                self.parent.remove(self)
+                return
+
+            super(Entity, self).draw()
+
+                           </code></pre>
+                        </p>
+                    </section>
+                        <section>
+                        <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                           Extra: spawning objects (II)
+                        </h2>
+                        <p>
+                           <pre><code data-trim>
+
+import random as rnd
+
+# ...
+class SpawnerLayer(cocos.layer.ColorLayer):
+
+    def __init__(self, image):
+        super(SpawnerLayer, self).__init__(r=255, g=255, b=255, a=255)
+        self.schedule_interval(callback=self.__spawn__, interval=1)
+        self.image = image
+        
+    def __spawn__(self, _):
+        y = rnd.uniform(10, 400)
+        spawned = Entity(self.image, -100, y)
+        spawned.scale = rnd.uniform(0.5, 1.5)
+        spawned.do(MoveTo((800, y), rnd.randint(1, 8)))
+        self.add(spawned)
+
+                           </code></pre>
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <h2>Sharing the code</h2>
+                    <p>
+                        <a href="https://github.com/adoankim/python-vigo-gamedev/tree/master/src/">Complete code examples used in the slides</a></p>
+                    <p>
+                        <a href="https://github.com/adoankim/RunnerBase">RunnerBase</a>: A Cocos2d based runner skeleton that eases the building of simple runner games.</p>
+                </section>
+                <section>
+                     <div class="clean-images left">
+                            <a href="http://python.cocos2d.org/">
+                                <img src="img/cocos2d.png"  width="15%" alt="Cocos2d" title="Cocos2d"/>
+                            </a>
+                        </div>
+                        <h2>
+                            Other things to check:
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="http://python.cocos2d.org/doc/programming_guide/tiled_map.html"> Tiled maps
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://python.cocos2d.org/doc/programming_guide/skeleton/skeleton.html">Skeletal Animations</a>
+                            </li>
+                            <li>
+                                <a href="http://python.cocos2d.org/doc/api/cocos.shader.html">
+                                Shaders
+                                </a> | <a href="http://nuclear.mutantstargoat.com/articles/sdr_fract/">Fragment shaders</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/pybox2d/pybox2d">Physics with pybox2d</a>
+                            </li>
+                        </ul>
+                </section>
+                <section>
+                    <h2>Adam DKC</h2>
+                    <p>Twitter: <a href="https://twitter.com/adoankim">@adoankim</a></p>
+                    <p>Github: <a href="https://github.com/adoankim">adoankim</a></p>
+                    <p>E-Mail: dkc.adam [at] gmail [dot] com</p>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+		</script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-63122338-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+	</body>
+</html>
