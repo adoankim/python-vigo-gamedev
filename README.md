@@ -2,6 +2,8 @@
 
 Slides and examples about basics of game development for [Python Vigo Dev Group](https://www.python-vigo.es) presentation.
 
+[Link to projet GitHub.io slides](http://adoankim.github.io/python-vigo-gamedev/#/)
+
 ## Examples structure
 
 All the examples are hosted inside de *src* folder, and it's structured in the following way:
