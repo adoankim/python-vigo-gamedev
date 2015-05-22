@@ -614,7 +614,7 @@ img_grid = image.ImageGrid(img, rows, columns,
                            column_padding, row_padding)
 
 # We make a texture grid from the image grid for memory optimization
-texture_grid = mage.TextureGrid(img_grid)
+texture_grid = image.TextureGrid(img_grid)
 
 # Animation building from a set of elements of the grid
 animation_01 = image.Animation.
