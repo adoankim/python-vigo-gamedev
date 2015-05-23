@@ -43,7 +43,9 @@ class EnemyLayer(cocos.layer.Layer):
         sprite.btype = 'enemy'
 
         sprite.on_collide = lambda: self.remove(sprite)
-        sprite.cshape = cm.AARectShape(center=eu.Vector2(x, y), sprite.image.width*0.5, sprite.image.height*0.5)
+        sprite.cshape = cm.AARectShape(center=eu.Vector2(x, y),
+                                       half_width=sprite.image.width*0.5,
+                                       half_height=sprite.image.height*0.5)
         self.add(sprite, name=name)
 
     def draw(self):
