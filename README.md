@@ -2,6 +2,8 @@
 
 Slides and examples about basics of game development for [Python Vigo Dev Group](https://www.python-vigo.es) presentation.
 
+[Presentation slides](http://adoankim.github.io/python-vigo-gamedev/#/)
+
 ## Examples structure
 
 All the examples are hosted inside de *src* folder, and it's structured in the following way:
@@ -10,8 +12,7 @@ All the examples are hosted inside de *src* folder, and it's structured in the f
 -------------------------------- | -------------
 src/structure_and_effectsContent | Initial examples that explains basics about window generation, layer management and actions
 src/interaction                  | Examples about event handling, collision and objects spawning
-src/goodies                      | These ones show how to the handle music&sound player, and on the other hand, how to make animations based on spritesheets
-
+src/goodies                      | These ones show you how to manage the music/sound player, and also, how to make spritesheet based animations for your game.
 
 ### Examples execution
 First of all you must satisfy the dependencies required for the demos, they are listed in *requirements.txt* file.
