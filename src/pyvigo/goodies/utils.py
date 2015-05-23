@@ -22,7 +22,7 @@
 
 import os
 
-ASSETS_DIR = os.path.join(os.path.dirname(__file__), '../assets')
+ASSETS_DIR = os.path.join(os.path.dirname(__file__), '../../../assets')
 
 
 def get_res_path(relative):

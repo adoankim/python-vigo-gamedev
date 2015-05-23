@@ -63,7 +63,7 @@ class SpawnerLayer(cocos.layer.ColorLayer):
         self.add(spawned)
 
 if __name__ == '__main__':
-    pyglet.resource.path.append('../../assets/')
+    pyglet.resource.path.append('../../../assets/')
     pyglet.resource.reindex()
 
     # Scenes and layers configuration

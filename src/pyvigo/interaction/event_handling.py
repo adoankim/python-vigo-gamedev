@@ -74,7 +74,7 @@ class CharacterLayer(cocos.layer.Layer):
 if __name__ == '__main__':
 
     # We configure the base assets dir
-    pyglet.resource.path.append('../../assets/')
+    pyglet.resource.path.append('../../../assets/')
     pyglet.resource.reindex()
 
     cocos.director.director.init()

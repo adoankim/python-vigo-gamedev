@@ -26,6 +26,7 @@ from pyglet.window import key
 
 import utils
 
+
 pyglet.options['audio'] = ('openal', 'silent')
 
 
@@ -42,7 +43,7 @@ class MultimediaLayer(cocos.layer.Layer):
         music = pyglet.resource.media('music/Matts_Blues.wav')
         player = pyglet.media.Player()
         player.queue(music)
-        player.volume = 0.2
+        player.volume = 1
         player.play()
 
         # sound effects
@@ -58,11 +59,11 @@ class MultimediaLayer(cocos.layer.Layer):
 
     def on_key_press(self, _key, modifiers):
         if _key in self.sounds:
-            self.sounds[_key].play().volume = 0.05
+            self.sounds[_key].play().volume = 0.5
 
 
 if __name__ == '__main__':
-    pyglet.resource.path.append('../../assets/')
+    pyglet.resource.path.append('../../../assets/')
     pyglet.resource.reindex()
 
     cocos.director.director.init(100, 100)

@@ -28,6 +28,7 @@
 import cocos
 import pyglet
 from pyglet.window import key
+
 import utils
 
 
@@ -114,7 +115,7 @@ class AnimLayer(cocos.layer.Layer):
         self.add(CharacterLayer())
 
 if __name__ == "__main__":
-    pyglet.resource.path.append('../../assets/')
+    pyglet.resource.path.append('../../../assets/')
     pyglet.resource.reindex()
 
     cocos.director.director.init(height=100, width=100)
