@@ -18,7 +18,7 @@ First of all you must satisfy the dependencies required for the demos, they are 
 
 In order to install these dependencies you can just type: ```pip install -r requirements.txt```. I suggest you to build a [virtualenv](https://virtualenv.pypa.io/en/latest/) environment to maintain clean your Python installation.
 
-In order to execute them just type: ``` python src/demo_folder/demo_file.py```
+In order to execute them just type: ``` python src/pyvigo/demo_folder/demo_file.py```
 
 
 
